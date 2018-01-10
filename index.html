@@ -12,6 +12,52 @@
 <body>
 	<div id="wrapper-ppal">
 		
+		<header id='cabecera' class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<h1>Práctica: ajax API request Handlebars.js template</h1>
+				</div>
+			</div>
+		</header>
+		
+		<section id="cuerpo" class="container">
+			<div class="row">
+				<div class="col-12">
+					<h5>Descripción de la práctica:</h5>
+					<p>Se nos pide realizar una página en la que haciendo uso de jQuery hagamos peticiones AJAX a alguna API pública y mediante Handlebars.js mostremos la información obtenida dándole un formato bonito con boostrap.</p>
+					<p>En este caso voy a emplear la api del videojuego GuildWars 2: https://wiki.guildwars2.com/wiki/API:2</p>
+				</div>
+			</div>
+			<div class="row">
+				<div id='controles' class="col-4">
+					<h5>Controles:</h5>
+					<ul>
+						<li><button id='btLogrosPVE' type='button' class='btn btn-dark'>Cargar logros PVE</button></li>
+						<!--<li><button type='button' class='btn btn-dark'>Cargar info2</button></li>-->
+						<!--<li><button type='button' class='btn btn-dark'>Cargar info3</button></li>-->
+					</ul>
+				</div>
+				<div id="wrapper-resultado" class="col-8">
+					<h5>Resultado:</h5>
+					<div id="resultado">
+						<div id="loader">
+							<img src="img/ajax-loader.gif" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer id="pie" class="container-fluid">
+			<div class="row">
+				<div class="col-6 ">
+					<small>DWC - Enero 2018</small>
+				</div>
+				<div class="col-6">
+					<small>iglloala@gmail.com</small>
+				</div>
+			</div>
+		</footer>
 	</div>
 	<!-- FICHEROS JAVASCRIPT -->
 	<!-- jQuery -->
@@ -19,7 +65,7 @@
 	<!-- Bootstrap -->
 	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.bundle.min.js'></script>
 	<!-- Handlebars -->
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.runtime.min.js'></script>
 	<!-- Mis mierdas -->
 	<script src='js/main.js'></script>
 </body>

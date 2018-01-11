@@ -56,6 +56,8 @@ var miCodigo = (function(){
 		jqxhr.always(function(){
 			// Vacío la capa de resultados
 			_bloqueResultado.html("");
+			// pero le vuelvo a meter el loader
+			_bloqueResultado.append(_loader);
 		});
 	}
 
@@ -66,7 +68,6 @@ var miCodigo = (function(){
 		var jqxhr = $.get("https://api.guildwars2.com/v2/skins");
 		// done
 		jqxhr.done(function(datos){
-			console.log(datos); // DEBUG
 			// Del array que me ha pasado voy a seleccionar 8 id's aleatorios
 			var listaIds = [];
 			for (var i=0; i<8; i++) {
@@ -75,7 +76,6 @@ var miCodigo = (function(){
 				// Y extraigo un identificador válido
 				listaIds.push(datos[indice]);
 			}
-			console.log(listaIds); // DEBUG
 			// Ahora que ya tengo id's válidos hago otra petición AJAX para recuperar la información de dichos id's
 			var params = {lang: 'es', ids: listaIds.join()};
 			jqxhr = $.get("https://api.guildwars2.com/v2/skins", params);
@@ -83,7 +83,6 @@ var miCodigo = (function(){
 			jqxhr.done(function(datos){
 				datos.forEach(function(skin){
 					var context = {icono: skin.icon, nombre: skin.name, tipo: skin.type, rareza: skin.rarity};
-					console.log(context); // DEBUG
 					var html = Handlebars.templates.skin(context);
 					_bloqueResultado.append(html);
 				});
@@ -102,6 +101,8 @@ var miCodigo = (function(){
 		jqxhr.always(function(){
 			// Vacío la capa de resultados
 			_bloqueResultado.html("");
+			// pero le vuelvo a meter el loader
+			_bloqueResultado.append(_loader);
 		});
 	}
 

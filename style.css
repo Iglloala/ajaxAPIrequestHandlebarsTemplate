@@ -49,3 +49,19 @@
 	margin-bottom: 0;
 	font-weight: bold;
 }
+
+.wrapper-skin {
+	background-color: #CBCBCB;
+	margin-bottom: 1rem;
+	padding: 5px;
+}
+
+.wrapper-skin .icono {
+	display: block;
+	margin: 0 auto;
+}
+
+.wrapper-skin .nombre {
+	font-weight: bold;
+	word-wrap: break-word;
+}
